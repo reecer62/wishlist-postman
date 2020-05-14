@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "f9336f1d-eb7d-432d-8a4b-ca371f775b1a",
+		"name": "Wishlist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Wishes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"action\": \"searchComments\"\n}"
+				},
+				"url": {
+					"raw": "http://wishlist.cslabs.clarkson.edu/api",
+					"protocol": "http",
+					"host": [
+						"wishlist",
+						"cslabs",
+						"clarkson",
+						"edu"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Wish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"action\": \"addComment\",\n\t\"name\": \"Dr. Test\",\n\t\"text\": \"I'd like {insert wish here} to be done.\"\n}"
+				},
+				"url": {
+					"raw": "http://wishlist.cslabs.clarkson.edu/api",
+					"protocol": "http",
+					"host": [
+						"wishlist",
+						"cslabs",
+						"clarkson",
+						"edu"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Wish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"editComment\",\n    \"id\": 217,\n    \"newText\": \"insert new text\"\n}"
+				},
+				"url": {
+					"raw": "http://wishlist.cslabs.clarkson.edu/api",
+					"protocol": "http",
+					"host": [
+						"wishlist",
+						"cslabs",
+						"clarkson",
+						"edu"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Wish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"deleteComment\",\n    \"id\": 217\n}"
+				},
+				"url": {
+					"raw": "http://wishlist.cslabs.clarkson.edu/api",
+					"protocol": "http",
+					"host": [
+						"wishlist",
+						"cslabs",
+						"clarkson",
+						"edu"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
